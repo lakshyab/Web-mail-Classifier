@@ -1,2 +1,1 @@
-# Web-mail-Classifier
-Programming Club Project
+# Mail_Classifier
