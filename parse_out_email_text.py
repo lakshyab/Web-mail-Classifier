@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from nltk.stem.snowball import SnowballStemmer
+from nltk.stem.snowball import SnowballStemmer // Used for words like pragram, programs, programmer 
 import string
 
 def parseOutText(f):
@@ -9,7 +9,7 @@ def parseOutText(f):
     content=all_text.split("X-FileName:")
     words = ""
     stemmer=SnowballStemmer("english")
-    text_string = content[1].translate(string.maketrans("", ""), string.punctuation)
+    text_string = content[1].translate(string.maketrans("", ""), string.punctuation) // maketrans for making a translational table, but here we have things already in our desired language. So, Chill.
     s=text_string.split()
     a= content[0].split("X-From:")
     b=a[1].split("X-To:")
